@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent"
     android:contentDescription="@string/app_name"
     tools:context=".ui.main.MainActivity">
@@ -114,15 +115,16 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/search_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="8dp"
-            android:layout_marginHorizontal="19dp"
-            android:background="@drawable/bg_search_view"
-            app:iconifiedByDefault="false"
-            app:queryHint="Search here ...."/>
+        <!--FITUR DI NONAKTIFKAN HINGGA MENDAPAT DATA YANG LEBIH BANYAK-->
+<!--        <androidx.appcompat.widget.SearchView-->
+<!--            android:id="@+id/search_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginVertical="8dp"-->
+<!--            android:layout_marginHorizontal="19dp"-->
+<!--            android:background="@drawable/bg_search_view"-->
+<!--            app:iconifiedByDefault="false"-->
+<!--            app:queryHint="Search here ...."/>-->
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_card_info"
