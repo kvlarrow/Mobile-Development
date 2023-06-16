@@ -69,8 +69,8 @@
 
                         <ProgressBar
                             android:id="@+id/progress_circular"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:visibility="gone"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -114,6 +114,14 @@
                 </androidx.cardview.widget.CardView>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
+
+        <ProgressBar
+            android:id="@+id/progress_circular2"
+            android:layout_marginTop="8dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
 
         <!--FITUR DI NONAKTIFKAN HINGGA MENDAPAT DATA YANG LEBIH BANYAK-->
 <!--        <androidx.appcompat.widget.SearchView-->

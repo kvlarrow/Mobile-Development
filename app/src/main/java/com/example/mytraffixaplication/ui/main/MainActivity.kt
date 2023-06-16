@@ -132,8 +132,10 @@ class MainActivity : AppCompatActivity() {
     private fun showLoading(isLoading: Boolean){
         if (isLoading){
             binding.progressCircular.visibility = View.VISIBLE
+            binding.progressCircular2.visibility = View.VISIBLE
         } else {
             binding.progressCircular.visibility = View.GONE
+            binding.progressCircular2.visibility = View.GONE
         }
     }
 
