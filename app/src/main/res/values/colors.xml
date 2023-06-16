@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="mainColor">#1B4571</color>
+    <color name="mainLightColor">#72AAE5</color>
+    <color name="mainRed">#BF2051</color>
+    <color name="disableRed">#AB7888</color>
+    <color name="yellow">#FFE600</color>
+    <color name="custom_outline_stroke_color">@color/white</color>
+    <color name="green">#34A853</color>
+    <color name="stroke">#BFBBBB</color>
+    <color name="redIndicator">#EB4335</color>
+    <color name="mtrl_textinput_default_box_stroke_color">#fff</color>
+</resources>

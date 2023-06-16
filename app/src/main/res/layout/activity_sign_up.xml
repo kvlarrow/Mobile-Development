@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainColor"
+    tools:context=".ui.signup.SignUpActivity">
+
+    <TextView
+        android:id="@+id/tvHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:text="@string/signup_hello"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/signupNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/signin_up_note"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHello" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/term"
+        android:textColor="@color/yellow"
+        app:layout_constraintEnd_toEndOf="@+id/signupNote"
+        app:layout_constraintStart_toStartOf="@+id/signupNote"
+        app:layout_constraintTop_toBottomOf="@+id/signupNote" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_signup_email"
+        app:hintAnimationEnabled="false"
+        style="@style/TextInputLayoutStyle"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:hintTextColor="@color/white"
+        app:boxCornerRadiusTopStart="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="37dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColorHint="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_signup_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:height="50dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="50dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_signup_password"
+        app:hintAnimationEnabled="false"
+        style="@style/TextInputLayoutStyle"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:hintTextColor="@color/white"
+        app:boxCornerRadiusTopStart="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="37dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColorHint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/layout_signup_email">
+
+        <com.example.mytraffixaplication.costums.CostumEditText
+            android:id="@+id/ed_signup_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:height="50dp"
+            android:hint="@string/ed_password"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="50dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_signup_confirmPassword"
+        app:hintAnimationEnabled="false"
+        style="@style/TextInputLayoutStyle"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:hintTextColor="@color/white"
+        app:boxCornerRadiusTopStart="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="37dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColorHint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/layout_signup_password">
+
+        <com.example.mytraffixaplication.costums.CostumEditText
+            android:id="@+id/ed_confimPassword_signup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="16dp"
+            android:hint="@string/confirm_password"
+            android:textColor="@color/white"
+            android:inputType="textPassword"
+            android:height="50dp"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="50dp"
+            tools:ignore="RtlSymmetry" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="@string/sign_in"
+        android:textSize="14sp"
+        android:textColor="@color/yellow"
+        app:layout_constraintEnd_toEndOf="@+id/layout_signup_confirmPassword"
+        app:layout_constraintTop_toBottomOf="@+id/layout_signup_confirmPassword" />
+
+    <TextView
+        android:id="@+id/sign_in_suggest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="@string/login_suggest"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/sign_in"
+        app:layout_constraintTop_toTopOf="@+id/sign_in" />
+
+    <com.example.mytraffixaplication.costums.CostumButton
+        android:id="@+id/costum_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="37dp"
+        android:text="@string/sign_up"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_suggest"/>
+
+    <TextView
+        android:id="@+id/exception_suggest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="@string/option_login"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/costum_button"
+        app:layout_constraintStart_toStartOf="@+id/costum_button"
+        app:layout_constraintTop_toBottomOf="@+id/costum_button" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:src="@drawable/google"
+        app:layout_constraintEnd_toEndOf="@+id/costum_button"
+        app:layout_constraintStart_toStartOf="@+id/costum_button"
+        app:layout_constraintTop_toBottomOf="@+id/exception_suggest" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

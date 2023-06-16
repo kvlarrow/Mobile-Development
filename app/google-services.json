@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "706171458935",
+    "firebase_url": "https://traffix-cloud-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "traffix-cloud",
+    "storage_bucket": "traffix-cloud.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:706171458935:android:82988ab347f81733d3fd72",
+        "android_client_info": {
+          "package_name": "com.example.mytraffixaplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "706171458935-kk3gp6hbd1diangb6b6dpbkmh6tjfttg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mytraffixaplication",
+            "certificate_hash": "74e982ccd6f7bc3a47e33b3eb87ce2b7f6e6ddab"
+          }
+        },
+        {
+          "client_id": "706171458935-rd05mnudhf6kbtqks2kakp8cu8nqaeth.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mytraffixaplication",
+            "certificate_hash": "638a5c3d2f85f98e637b937a8f44d7224b7155cc"
+          }
+        },
+        {
+          "client_id": "706171458935-ee8t767ukh6n9g9k72884jbd9384t3hm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf9dHRH3j10rDAcDoFlgKmnkFFA2MhpK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "706171458935-29bucpn2i4v92fjicl0mrkbbjv0n24g9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
