@@ -10,13 +10,17 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+import com.example.mytraffixaplication.R
 import com.example.mytraffixaplication.adapter.CardInfoAdapter
 import com.example.mytraffixaplication.api.response.Atcs
 import com.example.mytraffixaplication.api.response.TraffixResponse
 import com.example.mytraffixaplication.api.retrofit.ApiConfig
 import com.example.mytraffixaplication.databinding.ActivityMainBinding
+import com.example.mytraffixaplication.helper.extractUsernameFromEmail
 import com.example.mytraffixaplication.ui.profile.ProfileActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import retrofit2.Call
 import retrofit2.Callback
@@ -31,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         private const val TAG = "MainActivity"
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -44,24 +49,29 @@ class MainActivity : AppCompatActivity() {
         val jwtToken = sharedPref.getString("jwt_token", "")
         Log.d("token = ", jwtToken.toString())
 
-        val currentUser = FirebaseAuth.getInstance().currentUser
+        val currentUser: FirebaseUser? = FirebaseAuth.getInstance().currentUser
         currentUser?.let { user ->
             val email = user.email
             val username = extractUsernameFromEmail(email)
 
-            binding.helloUser.text = "Hello $username"
+            binding.helloUser.text = "Hallo, $username"
+
+            val googleSignInAccount = GoogleAuthProvider.getCredential(user.uid, null)
+            val photoUrl = user.photoUrl
+            photoUrl?.let { profileImageUrl ->
+                val requestOptions = RequestOptions()
+                    .placeholder(R.drawable.profile_image)
+                    .error(R.drawable.profile_image)
+
+                Glide.with(this)
+                    .load(profileImageUrl)
+                    .apply(requestOptions)
+                    .into(binding.circleImageView)
+            }
         }
 
         getHomePageInfo()
         setAction()
-    }
-
-    private fun extractUsernameFromEmail(email: String?): String {
-        val atIndex = email?.indexOf("@")
-        if (atIndex != -1) {
-            return email?.substring(0, atIndex!!) ?: ""
-        }
-        return email ?: ""
     }
 
     private fun getHomePageInfo() {
