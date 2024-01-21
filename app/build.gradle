@@ -10,9 +10,9 @@ android {
     signingConfigs {
         debug {
             storeFile file('C:\\Users\\Ronal\\MyKeyStore\\keystore.jks')
-            storePassword 'BismillahBisa080202'
+            storePassword '-'
             keyAlias 'keymyapp'
-            keyPassword 'BismillahBisa080202'
+            keyPassword '-'
         }
     }
     namespace 'com.example.mytraffixaplication'
